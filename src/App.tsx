@@ -36,7 +36,6 @@ export const App: React.FC = () => {
 
     getTodos()
       .then(setTodos)
-      // .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 
@@ -67,8 +66,6 @@ export const App: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* <TodoModal /> */}
 
       {selectedTodo && (
         <TodoModal todo={selectedTodo} onClose={() => setSelectedTodo(null)} />
